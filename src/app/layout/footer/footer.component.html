@@ -1,0 +1,12 @@
+<footer>
+    <mat-toolbar>
+        <img src=" ../../../../../assets/inicio.png" alt="home" routerLink="/home" class="router-link"/>
+        <img src=" ../../../../../assets/buscar.png" alt="buscar" routerLink="/reservar" class="router-link"/>
+        <!--<img src=" ../../../../../assets/mensaje.png" alt="mensaje" class="router-link"/>-->
+        <img src=" ../../../../../assets/usuario.png" alt="usuario" routerLink="/users" class="router-link"/>
+        <button mat-menu-item *ngIf="isLoggedIn" (click)="authService.logout()">
+            <mat-icon>logout</mat-icon>
+            Cerrar sesión
+          </button>
+    </mat-toolbar>
+</footer>

@@ -1,0 +1,76 @@
+<div class="home-container" *ngIf="isNot">
+    <div class="home-div-logo" *ngIf="isHome">
+      <img class="home-logo" src="../../../assets/maleta.png" alt="logo" />
+      <img
+        (click)="home()"
+        class="home-letras"
+        src="../../../assets/maleteo.png"
+        alt="letras"
+      />
+    </div>
+  
+    <div class="home-div1" *ngIf="!isHome && !isTarifa">
+     
+      <img class="home-img" src="../../../assets/cadena.png" alt="cadena" />
+      <h1 class="home-h1">Prepárate para liberarte de tu equipaje</h1>
+      <p class="p-home">
+        Encuentra a tu guardián y disfruta a tu manera. Miles de usuarios ya están
+        aprovechando las ventajas.
+      </p>
+      <button (click)="tarifa()" class="home-button mat-raised-button">
+        Continuar
+      </button>
+    </div>
+  
+    <div class="home-div1" *ngIf="isTarifa && !isHome && !isPrecio">
+      
+      <img class="home-img" src="../../../assets/world.png" alt="world" />
+      <h1 class="home-text1">El mismo precio en cualquier parte</h1>
+      <p class="home-text2">
+        Dispondrás de un precio fijo estés donde estés sin importar el tamaño o el
+        peso.
+      </p>
+      <button routerLink="/register" class="home-button mat-raised-button">
+        Empezar ya
+      </button>
+      <div class="home-div-cont" *ngIf="!isPrecio">
+        <p (click)="precio()" class="home-precio">Consulta los precios</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="home-div2" *ngIf="isPrecio && isTarifa">
+    
+    <img
+      class="home-flecha"
+      src="../../../assets/flecha-izquierda.png"
+      alt="flecha"
+      routerLink="/register"
+    />
+    <h4 class="home-text3">Selecciona</h4>
+    <mat-form-field class="mat-form">
+      <mat-label>Continente</mat-label >
+      <mat-select [(ngModel)]="option">
+        <ng-container *ngFor="let continent of continents">
+          <mat-option [value]="continent.value">{{
+            continent.viewValue
+          }}</mat-option>
+        </ng-container>
+      </mat-select>
+    </mat-form-field>
+    <h2 class="home-text4">Nuestras tarifas fijas</h2>
+    <div class="home-divs">
+      <section class="home-sec1">
+        <p class="p-home">24 horas</p>
+        <h1>6€</h1>
+        <p class="p-home">Por equipaje</p>
+      </section>
+      <section class="home-sec2">
+        <p class="p-home">Día adicional</p>
+        <h1>4€</h1>
+        <p class="p-home">Por equipaje</p>
+      </section>
+    </div>
+  </div>
+  <app-footer *ngIf="isPrecio"></app-footer>
+  

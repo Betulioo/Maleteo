@@ -1,0 +1,190 @@
+@media only screen and (max-width: 600px) {
+    .home-container {
+      background-color: #fdc22b;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .nav-bar {
+      width: 93%;
+      height: 15px;
+      position: fixed;
+      top: 20px;
+      right: 12px;
+    }
+  }
+  .home-div-logo {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .home-logo {
+    width: 30%;
+    display: flex;
+    margin-left: 35%;
+  }
+  .home-letras {
+    width: 75%;
+    margin-left: 15%;
+    margin-top: 10%;
+    cursor: pointer;
+  }
+  
+  .home-div1 {
+    width: 90%;
+    height: 80vh;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    margin-right: 9%;
+    margin-left: 9%;
+    margin-bottom: 7px;
+    margin-top: 8%;
+    color: #333333;
+  
+    h1,
+    .p-home {
+      margin-bottom: 40px;
+      margin-top: 17%;
+      text-align: start;
+      color: #333333;
+  
+    }
+    .home-img {
+      width: 33%;
+      margin-top: 7%;
+    }
+  }
+  
+  .home-text1 {
+    font-family: "Catamaran", sans-serif, size 14, 5;
+    color: #333333;
+    font-size: 27px;
+    text-align: start;
+    padding: 6%;
+  }
+  .home-text2 {
+    color: #333333;
+    font-size: 22px;
+    text-align: start;
+  }
+  
+  .home-button.mat-raised-button {
+    background-color: #f68f24;
+    color: white;
+    width: 82%;
+    height: 55px;
+    margin-top: 90px;
+    border-radius: 12px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .home-div-cont {
+    width: 80%;
+    align-items: center;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .home-precio {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      text-decoration: underline;
+      cursor: pointer;
+      color: #333333;
+  
+    }
+  }
+  .home-div2 {
+    width: 100%;
+    height: 85%;
+    .home-flecha {
+      width: 5%;
+      margin-left: 5%;
+      margin-top: 5%;
+      cursor: pointer;
+    }
+    .home-text3 {
+      margin-left: 5%;
+      margin-top: 10%;
+    }
+    .mat-form {
+      width: 90%;
+      height: 10%;
+      margin-left: 5%;
+    }  
+  }
+  .home-divs {
+    font-family: "Catamaran", sans-serif, size 14, 5;
+    width: 75%;
+    height: 50%;
+    margin-left: 5%;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p,
+    h1 {
+      margin-bottom: 8px;
+      margin-top: 8px;
+    }
+    .home-sec1,
+    .home-sec2 {
+      width: 87%;
+      height: 34%;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+  
+      &.home-sec1 {
+        background-color: #ff8200;
+        margin-top: 10%;
+        margin-bottom: 48px;
+      }
+  
+      &.home-sec2 {
+        background-color: #01b5e6;
+      }
+    }
+  }
+  .home-text4 {
+    font-family: "Catamaran", sans-serif, size 14, 5;
+    margin-left: 5%;
+    margin-top: 8%;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .example {
+      background: green;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .example {
+      background: blue;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) {
+    .example {
+      background: orange;
+    }
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    .example {
+      background: pink;
+    }
+  }
+  

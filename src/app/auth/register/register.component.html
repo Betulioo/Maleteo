@@ -1,0 +1,40 @@
+<div class="login-ctn">
+    <div class="backArrow">
+      <img class="flecha" src="../../../assets/flecha-izquierda.png" alt="" routerLink="['']">
+    </div>
+    <div class="enlaces">
+      <div class="login-enlaces-ctn">
+        <button class="login-btn" routerLink="/login">Iniciar sesión</button>
+      </div>
+      <div>
+        <button class="resgister-btn" routerLink="/register">Registrate</button>
+      </div>
+    </div>
+    <div class="login-h3">
+    <h3>Unete a Maleteo y disfruta</h3>
+    <h3>de sus ventajas</h3>
+    </div>
+    <div class="btns-enlaces">
+      <button class="btn-enlace fb"></button>
+      <button class="btn-enlace google"></button>
+    </div>
+    <p>o utiliza tu correo electronico</p>
+    <div class="formLogin">
+      <form [formGroup]="userForm" (ngSubmit)="save()">
+        <input class="inputs" type="email" formControlName="email" placeholder="Direccion de correo electronico">
+        <input class="inputs" matInput type="password" formControlName="contraseña" placeholder="Contraseña">
+        <input class="inputs"  type="text" formControlName="nombre" placeholder="Nombre">
+        <input  class="inputs" type="text" formControlName="apellido" placeholder="Apellido">
+  
+        <input class="inputs" type="date" placeholder="Fecha de nacimiento">
+        <div class="checkntext">
+          <input class="checki" type="checkbox">
+          <p>Quiero recibir consejos sobre como gestionar mi equipaje, ofertas, novedades y otros correos electronicos de Maleteo.</p>
+        </div>
+        <button class="btn-submit" type="submit">
+          Registrar
+        </button>
+        </form>
+        </div>
+    </div>
+  

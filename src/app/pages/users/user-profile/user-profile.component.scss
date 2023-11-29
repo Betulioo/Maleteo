@@ -1,0 +1,117 @@
+@media only screen and (max-width: 600px) {
+
+
+    *a{
+      color: rgb(246, 246, 246);
+      text-decoration: none;
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+    }
+    *h2{
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+      text-shadow: 2px 5px 2px#F69938;
+    }
+    *h3{
+      font-family: Roboto, "Helvetica Neue", sans-serif;
+      text-shadow: 2px 5px 2px#F69938;
+    }
+    
+        .user-btn-home{
+          font-size: 18px;
+          padding: 10px;
+          margin: 15px 20px;
+          background-color: white;
+          border: none;
+          border-bottom: 3px solid #FDC22B;
+        }
+        .user-btn-edit{
+          font-size: 18px;
+          padding: 10px;
+          color: white;
+          margin: 15px 20px;
+          background-color: #F69938;
+          border: none;
+          border-bottom: 3px solid #FDC22B;
+          border-radius: 30px 30px 30px 30px;
+        }
+        .user-btn-route-usuarios{
+          font-size: 18px;
+          padding: 10px;
+          margin: 15px 20px;
+          background-color: #F69938;
+          border: none;
+          border-bottom: 3px solid #FDC22B;
+          border-radius: 30px 30px 30px 30px;
+    
+        }
+        .user-btn-route-anuncios{
+          font-size: 18px;
+          padding: 10px;
+          margin: 15px 20px;
+          background-color:#F69938;
+          border: none;
+          border-bottom: 3px solid #FDC22B;
+          border-radius: 30px 30px 30px 30px;
+        }
+        .user-btns-div{
+          display:flex;
+          flex-direction: column;
+          background-color: #ffffff;
+        }
+        .user-form-prof {
+          background-color: #F69938;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-content: space-around;
+          justify-content: space-evenly;
+          align-items: stretch;
+        }
+    
+        .user-container {
+          height: 80vh;
+          .user-detail-card{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-evenly;
+            align-items: stretch;
+            background: linear-gradient(#F69938,white);
+            .user-h1photo{
+              height: 30%;
+              margin-top: 10px;
+              .user-imagen{
+                height: 180px;
+                box-shadow: 5px 10px 10px #F69938;
+                border-radius: 90px 90px 90px;
+              }
+    
+            }
+          }
+        }
+    
+      }
+    
+    
+      @media only screen and (min-width: 600px) {
+    
+    
+        .example {background: green;}
+    
+    
+      }
+    
+      @media only screen and (min-width: 768px) {
+        .example {background: blue;}
+      }
+    
+      @media only screen and (min-width: 992px) {
+        .example {background: orange;}
+      }
+    
+      @media only screen and (min-width: 1200px) {
+        .example {background: pink;}
+      }
+    
+    

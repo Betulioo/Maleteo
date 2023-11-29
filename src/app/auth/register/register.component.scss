@@ -1,0 +1,142 @@
+@media only screen and (max-width: 600px) {
+
+    .login-ctn{
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      height: 100vh;
+      text-align: left;
+  
+    }
+  
+    .backArrow{
+      height: 5vh;
+    }
+  
+  .flecha{
+      width: 5%;
+      margin-left: 5%;
+      margin-top: 5%;
+      cursor: pointer;
+  }
+  .enlaces{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .login-h3{
+    margin-top: 30px;
+      margin-bottom: 20px;
+  }
+  .login-btn{
+    font-size: 18px;
+    padding: 10px;
+    margin: 15px 20px;
+    background-color: white;
+    border: none;
+  }
+  .resgister-btn{
+    font-size: 18px;
+    padding: 10px;
+    margin: 15px 20px;
+    background-color: white;
+    border: none;
+    border-bottom: 3px solid #FDC22B;
+  }
+  h3 {
+    margin: 0px 20px 0px 20px;
+    font-size: 25px;
+  }
+  .btns-enlaces{
+    display: flex;
+    justify-content: flex-start;
+    margin: 15px;
+  }
+  
+  .btn-enlace{
+    width: 40%;
+    height: 40px;
+    margin: 5px;
+    border-radius: 5px;
+  
+  }
+  .fb{
+    font-size: 20px;
+    border: none;
+    background-image: url('../../../assets/fb.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .google{
+    font-size: 20px;
+    background-image: url('../../../assets/google-btn.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: lightgrey;
+  
+  }
+  p{
+    margin-left: 20px;
+    color: gray;
+    text-align: justify;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+  }
+  .inputs{
+    font-size: 18px;
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+    border: none;
+    border-bottom: 1px solid lightgrey;
+  }
+  .inputs:focus {
+    outline-color: transparent;
+  }
+  .checkntext{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .checki{
+    margin-top: 5px;
+  }
+  
+  .btn-submit{
+    color: white;
+    width: 70%;
+    height: 40px;
+    font-size: 18px;
+    background-color: #FDC22B;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+    }
+  
+  
+    @media only screen and (min-width: 600px) {
+  
+  
+      .example {background: green;}
+  
+  
+    }
+  
+    @media only screen and (min-width: 768px) {
+      .example {background: blue;}
+    }
+  
+    @media only screen and (min-width: 992px) {
+      .example {background: orange;}
+    }
+  
+    @media only screen and (min-width: 1200px) {
+      .example {background: pink;}
+    }
+  
