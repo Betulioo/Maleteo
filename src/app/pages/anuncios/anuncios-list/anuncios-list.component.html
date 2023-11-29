@@ -1,1 +1,30 @@
-<p>anuncios-list works!</p>
+
+<p-carousel *ngIf="!verDetalle" [value]="anuncios" [numVisible]="3" [numScroll]="3" [circular]="false" [responsiveOptions]="responsiveOptions">
+    <ng-template let-anuncio pTemplate="item">
+        <div  class="border-1 surface-border border-round m-2 text-center py-5 px-3 anuncio-div">
+            <div class="mb-3 anuncio-div--img">
+                <img src="{{ anuncio.image[0] }}" [alt]="anuncio.titulo" class="w-6 shadow-2 anuncio-img" />
+            </div>
+            <div>
+               
+                <p-tag [value]="anuncio.tipo"></p-tag>
+
+                <h4 class="mb-1 anuncio-h4">{{ anuncio.titulo }}</h4>
+                <h5 class="mt-0 mb-3 anuncio-h6">{{ anuncio.descripcion }}</h5>
+                <h5 class="mt-0 mb-3 anuncio-h6">Direccion:{{ anuncio.direccion }}</h5>
+              <h5>Piezas maximas permitidas: 5</h5>
+                <h6 class="mt-0 mb-3 anuncio-h6">{{ '€' + anuncio.precio }}</h6>
+                <div class="car-buttons mt-5 anuncio-div-button">
+                    <button type="button" class="home-button mat-raised-button" (click)="muestraDetalle()" (click)="addNewItem(anuncio._id)"  (click)="obtenerId(anuncio)" >
+                        Ver
+                      </button>
+                      
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</p-carousel>
+
+<div *ngIf="verDetalle">
+<app-anuncio-detail [ide]="idestaes" (newItemEvent)="addItem($event)"></app-anuncio-detail></div>
+

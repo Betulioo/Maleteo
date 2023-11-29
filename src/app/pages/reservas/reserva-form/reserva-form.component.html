@@ -1,1 +1,102 @@
-<p>reserva-form works!</p>
+<div class="regis-container">
+    <img
+    class="home-flecha"
+    src="../../../assets/flecha-izquierda.png"
+    alt="flecha"
+    routerLink="/login"
+  />
+    <h2 class="regis-txt1">Encuentra tu guardián</h2>
+    <form [formGroup]="reservaForm" (ngSubmit)="save($event)" > 
+
+    <div class="reser-div">
+      <mat-form-field class="mat-form">        
+        <mat-label>Ubicaciones</mat-label>
+        <mat-select formControlName="direccion">
+          <ng-container *ngFor="let ubicacion of Ubicaciones">
+            <mat-option [value]="ubicacion.value">{{
+              ubicacion.viewValue
+            }}</mat-option>
+          </ng-container>
+        </mat-select>
+      </mat-form-field>
+  </div>
+  
+      <div class="reser-div">
+        <mat-form-field class="mat-form">        
+          <mat-label>Depósito</mat-label>
+          <mat-select formControlName="deposito">
+            <ng-container *ngFor="let continent of continents">
+              <mat-option [value]="continent.value">{{
+                continent.viewValue
+              }}</mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="mat-form">        
+          <mat-label>Retirada</mat-label>
+          <mat-select formControlName="retirada">
+            <ng-container *ngFor="let continent of continents">
+              <mat-option [value]="continent.value">{{
+                continent.viewValue
+              }}</mat-option>
+            </ng-container>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="mat-form">        
+          <mat-label>Nº de piezas</mat-label>
+          <input
+            matInput
+            placeholder="equipaje"         
+            type="number"
+            formControlName="equipaje"
+          />
+        </mat-form-field>
+        <div  class="reser-btn-container">
+          <button type="button"  (click)="search()" class="reser-btn mat-fab extended">Buscar</button>
+        </div>
+      </div>
+      <app-anuncios-list [item]="ubicacion" (newItemEvent)="addItem($event)" *ngIf="mostrarAnuncios"></app-anuncios-list>
+      <button type="submit" class="anuncio-detail-btn-reservar">Reserva Ahora</button>
+    </form>
+
+
+    
+
+
+    <div class="blog" *ngIf="!mostrarAnuncios">
+      <h2 class="regis-txt1">Novedades</h2>
+      <img class="reser-blog" src="../../../assets/blog.PNG" alt="blog" />  
+      <h2 class="regis-txt1">Experiencias</h2>
+      <img class="blog-img" src="../../../assets/gijon.png" alt="gijon" />
+      <h3 class="reser-txt2">Un pedacito de Italia en Gijón</h3>
+      <p class="reser-p">
+        Sin lugar a duda es uno de los destinos gastronómicos por excelencia de
+        esta gran ciudad situada en el norte de España
+      </p>
+      <img class="blog-img" src="../../../assets/bcn.png" alt="bcn" />
+      <h3 class="reser-txt2">Sumérgete en Barcelona</h3>
+      <p class="reser-p">
+        Si estás dispuesto a adentrarte en el mundo del submarinismo y venir a
+        vivir una experiencia insólita en L'Aquiàrium
+      </p>
+    </div>
+    <div class="blog" *ngIf="mostrarExperiencias">
+      <img class="blog-img" src="../../../assets/machu-picchu.webp" alt="gijon" />
+      <h3 class="reser-txt2">Amanecer en Machu Picchu</h3>
+      <p class="reser-p">
+        Siente la energía de la ciudadela sagrada de Machu Picchu, emociónese con un maravilloso despertar al ritmo de los canticos matutinos de las aves. Contemple el bello amanecer con la magia del santuario Inca y tenga la oportunidad de subir a la montaña de Huayna Picchu donde tendrá una vista espectacular de la ciudadela.
+      </p>     
+    <img class="blog-img" src="../../../assets/chicago.webp" alt="gijon" />
+      <h3 class="reser-txt2">Excursión de gánsteres y fantasmas en Chicago</h3>
+      <p class="reser-p">
+        Experimente un lado colorido de la historia de Chicago con este tour de Gangsters and Ghosts. 
+      </p>
+    </div>     
+    <button *ngIf="!mostrarAnuncios" class="btn-reser" (click)="toggleExperiencias()">
+      {{ getExperiencias() }}
+    </button>
+  </div>
+
+<app-footer></app-footer>

@@ -1,0 +1,145 @@
+@media only screen and (max-width: 600px) {
+    .home-flecha {
+      width: 5%;
+      margin-left: 5%;
+      margin-top: 5%;
+      cursor: pointer;
+    }
+    .regis-txt1 {
+      margin-left: 2%;
+      margin-top: 10%;
+    }
+    .search-container {
+      display: flex;
+      width: 80%;
+      margin-left: 5%;
+      position: relative;
+    }
+    .anuncio-detail-btn-reservar{
+      font-size: 16px;
+      width: 150px;
+      background-color: orange;
+      color: white;
+      border-color: orange;
+      border-radius: 5px;
+    }
+  
+    .search-input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      padding-left: 37px;
+    }
+    .lupita {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .search-button {
+      background-color: #4285f4;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-40%);
+    }
+    .reser-div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 100px;
+    }
+    
+    .mat-form {
+      width: 48%;
+      height: 100px;
+      display: flex;
+      box-sizing: border-box;
+      padding: 10px;
+      margin-left: 5px;
+      align-items: center;
+      padding-left: 15px;
+    }
+    .reser-btn {
+      background-color: #f68f24;
+      color: white;
+      width: 151px;
+      height: 49px;
+      margin-right: 17px;
+      border-radius: 12px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  .blog{
+    width: 100%;
+    height: 40%;
+    margin-left: 20px;
+  } 
+  
+  .reser-blog{    
+      width: 100%;
+      height: 5%;
+      margin-left: 10px;
+  }
+  .blog-img{
+    width: 70%;
+  }
+  .reser-txt2{
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 5px;
+  }
+  .reser-p{
+    font-size: 15px;
+    color: #333333;
+    margin-top: 0; 
+    margin-right: 16px;
+  }
+  .btn-reser{
+      background-color: white;
+      color: #f68f24;
+      border-color: #f68f24;
+      width: 50%;
+      height: 55px;   
+      margin-top: 3px;
+      border-radius: 12px;
+      font-size: 20px;
+      margin-left: 22%; 
+      font-weight: bold; 
+      cursor: pointer;
+  }
+    
+  }
+  
+  @media only screen and (min-width: 600px) {
+    .example {
+      background: green;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .example {
+      background: blue;
+    }
+  }
+  
+  @media only screen and (min-width: 992px) {
+    .example {
+      background: orange;
+    }
+  }
+  
+  @media only screen and (min-width: 1200px) {
+    .example {
+      background: pink;
+    }
+  }
+  

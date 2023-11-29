@@ -1,1 +1,161 @@
-<p>anuncio-detail works!</p>
+
+
+<div class="anuncio-detail-container">
+
+    <div class="anuncio-detail-gallery">
+      <div class="card">
+        <p-galleria [value]="fotos" [showIndicators]="true" [showThumbnails]="false" [responsiveOptions]="responsiveOptions" [containerStyle]="{ 'max-width': '640px' }">
+            <ng-template pTemplate="item" let-item>
+                <img [src]="item" style="width: 100%; display: block;" />
+            </ng-template>
+        </p-galleria>
+    </div>
+    </div>
+    
+    <div class="anuncio-detail-data">
+      <div class="anuncio-detail-top">
+      <div class="anuncio-detail-nombre-direccion">
+        <h2>La {{tipo?.tipo}} de {{user.nombre}}</h2>
+        <h4>{{tipo?.direccion}}</h4>
+        <h6>Ofrezco una habitación disponible para alquilar como espacio de almacenamiento para maletas. Mi lugar es seguro, limpio y convenientemente ubicado. Perfecto para aquellos que necesitan una solución temporal para guardar sus pertenencias mientras están de viaje. ¡Contáctame para más detalles y disponibilidad</h6>
+      </div>
+      <img class="anuncio-detail-user-avatar" src="{{user?.foto}}" alt="imagen user">
+    </div>
+    <img class="anuncio-detail-estrellitas" src="https://static.vecteezy.com/system/resources/previews/010/366/280/non_2x/5-star-rating-review-star-transparent-free-png.png" alt="estrellitas">
+    <div class="anuncio-detail-msg">
+    <p class="anuncio-detail-maletita-text" >Rapido no le queda mucho espacio!</p>
+    <img class="maletita" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEX/pQD/////oQD/oAD/4rX/2Zj/3q3/8OH/47T/0qD/16P/owD/6sj/8uL/0Y3/pgD/qRf/9+f/vFv/tlX/+e3/5r7/+/T/wWX/89//7tH/7tT/mwD/68v/157/zYL/x3P/sCv/s0b/ynv/vFT/uUn/sCH/xW3/tTL/qRj/6cP/3qP/wV7/v2X/z4r/tD7/3Kdn+iUiAAAE9ElEQVR4nO3db3uaPBQG8BDQtY0V6VAR/25qV+fT+f2/3QPiIGrUqCHdiff9cj3H6/wWKg4ZYZ7rYV89QO2BkH4gpB8I6QdC+oGQfiCkHwjpB0L6gZB+6hTGo/Hk5/S9n+Utz/cib0XyP55OJ+1xMErjGqeoTxgsBN9GnEzxc9/nbNauDVmXMFj6gulHcP+zpknqEcbzq3zb+It6lrEWYTLj1/qy8FlSxzB1CJPw6gXcRoR1EGsQ9ma3ATPismd+nBqEn7ccokX4xPw45oW3HqPbReyYf7cxL2zcvoTZIgbG5zEvfL9L2DY+j3nhojpIuWakjnfj8xgX9n6V84r3l2YzCLpFWiczqpZdzE3PU4NwWQkHmj3tSvjH+PnCvLBTHXM3CGekhGGq2SMJzZ/zzQvL06H+hzBJ2HFeGP77wth5YVQJO7cII9MD1SrUnRbCu2JcmITsDiELX00PZF7I7hIy4//M/9fWkILQ+TUc3CnU/SyrHQivjvvClrhLKEamBzIuXN0pXJkeCMKr476wWwk/dC/vysKu6YEUwjhJB63VavUkR1qO5OlcJtVlms7vs5VV1lWPmJytTE6P0V0N0kTxd3ooTBuLZcj9wwyfqpLG8OjHUuTrwcevo47Q7Rk2qjE2x2PwsDNvHH4o2he2+mH+pTQ7iny1/a7L9veFS8KmrygQgof9/V9lWZisBT/xrQoVIcu/MBdreR0lYYOdHp2QMC8TbYUwXp/76p2WkAl/HR0Ko19n5yYmlG8K2Anj5fmxyQkZX0ayMD6/ghSF2SrGkrB/aWiCQsb7lXB8cWaKQsbHf4XRqbOgVExRKHi0E64vj0xSWBynmXCgMTFNIePpVqhz8wRV4TQXRjp3+BAV5ncgMW+sUUlVyPxmJvxP5yYtqsLsMGU9rdvQqArFzGORTiFZIfNjljouTNnIcWGLdR0Xdp0XBiyAsHhpqkLefABhU2teCC3lBuHGeeHLAwg3zgtfICwKIbQTCBUdzxD+LYTQTiBUdEBYFkJoJxAqOp7ZM4RFIYR2AqGiA8KyEEI7gVDRAWFZCKGdQKjogLAshNBOIFR0QFgWQmgnECo6HkHo/rU2CHeFENoJhIoOCMtCCO0EQkUHhGUhhHYCoaIDwrIQQjuBUNEBYVkIoZ1AqOiAsCwkK3T/TnYIy0II7QRCRccj/O88CHeFENoJhIoOCMtCCO0EQkUHhGUhhHYCoaLDfaH7T295BKH7T1GCcFcIoZ1AqOh4BKHjz02EsCqE0E4gVHQ8gnDlvNDxJyU/hHDgttAPnH9iecBenRe6/lz9gMXOC3vuC92+1pYLnd7BIxd6S+eFC7eFK8d30hFhj3mfOgNTFfKJx7yWViVVYZoJex8O79m12O671taYmKjQ726FOmdEmkLxxyv2P9xcrqUp9Ac7oTe/ODNJob/d93gr7M0uHacUhXzulUIvufR+SlAoOpEk9JIL7zb0hEKkniz0otnZuckJebgDVjuP9+bnOqgJ+eJo53EvP/OfHp2WkPPPqk4SeuncP7X3MSGh4P46kVSyMHvD+RlyLrIcvTQFYT445+E02TPtC7Nfx1b77cesE+a1UvwnSTj0vypDSbgZ7k0oRBh+/Hhrt3oHokNhwYyj6HU/Ul/87esSS0MeTBhF8SHutNCpQEg/ENIPhPQDIf1ASD8Q0g+E9AMh/UBIP/8DxUycyhMTiRgAAAAASUVORK5CYII=" alt="maletica"><p class="anuncio-detail-countDispo"> 3/7</p>
+    </div>
+    </div>
+    <div class="anuncio-detail-banner1">
+      <div class="anuncio-detail-casita-size">
+      <img class="anuncio-detail-casita" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Home_icon_orange.png" alt="casita">
+    </div>
+    <div class="anuncio-detail-banner1-ctn">
+    <h5>Tipo de locker</h5>
+    <p>El salon de su casa sera el lugar idoneo para alojar tus maletas y cuidar de ellas</p>
+    </div>
+    </div>
+      <div class="anuncio-detail-banner2">
+      <div class="anuncio-detail-num-users-img">
+      <p class="anuncio-detail-num">19</p>
+      <p class="anuncio-detail-num-users">usuarios</p>
+      </div>
+      <div class="anuncio-detail-descripcion-ctn2">
+      <h5>Como la patena</h5>
+      <p>19 usuarios recientes han catalogado su espacio como muy limpio</p>
+      </div>
+      </div>
+      <div class="anuncio-detail-banner3">
+        <div class="anuncio-detail-banner3-img">
+          <p>95%</p>
+        </div>
+        <div class="anuncio-detail-banner3-ctn">
+        <h5>Tipo de locker</h5>
+        <p>El salon de su casa sera el lugar idoneo para alojar tus maletas y cuidar de ellas</p>
+        </div>
+        </div>
+        <div class="anuncio-detail-spacer"></div>
+    <div class="anuncio-detail-description">
+    {{tipo?.descripcion}}
+    </div>
+    <div class="anuncio-detail-spacer"></div>
+    
+    
+    
+    <div class="anuncio-detail-location">
+      <h3>Ubicacion</h3>
+    </div>
+    <google-map
+    height="500px"
+      width="500px"
+      [zoom]="zoom"
+      [center]="center"
+      [options]="options"
+      (mapClick)="addMarker($event)"
+      (mapLoad)="onMapLoad($event)"
+    
+    >
+    
+        <map-marker *ngFor="let position of markerPositions" [position]="position" [options]="markerOptions"></map-marker>
+    
+      <map-marker
+        #markerElem
+        *ngFor="let marker of markers"
+        [position]="marker.position"
+        [label]="marker.label"
+        [title]="marker.title"
+        [options]="marker.options"
+      >
+      </map-marker>
+    
+      </google-map>
+    
+    
+    <div class="anuncio-detail-reseñas">
+      <h3 class="reseñasTitle">Reseñas</h3>
+            <div class="anuncio-detail-reseñas-ctn">
+              <div class="anuncio-detail-reseñas-img">
+                <img class="img-reseña" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_PLLclu7lCBRO8ie2kablVV6nXB3ZxGiulC_tW5oaNBOabN-Q6e9a4pnX94NPCDDoOso&usqp=CAU" alt="">
+              </div>
+              <div class="anuncio-detail-reseñas-ctn-name">
+                <h2>Carlos</h2>
+                <p class="anuncio-detail-reseña-p">La buardilla es super chula, muy limpia, Oliver nos ayudo a subir las maletas y nos transmitio muchisima seguridad</p>
+              </div>
+            </div>
+          <div class="anuncio-detail-spacer"></div>
+            <div class="anuncio-detail-reseñas-ctn">
+              <div class="anuncio-detail-reseñas-img">
+                <img class="img-reseña" src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745" alt="">
+              </div>
+              <div class="anuncio-detail-reseñas-ctn-name">
+                <h2>Robert</h2>
+                <p class="anuncio-detail-reseña-p">Marta is very nice and her space is so cozy, she also showed us the best places to go for tapas in Madrid. Thank you so much.</p>
+              </div>
+            </div>
+          <div class="anuncio-detail-spacer"></div>
+            <div class="anuncio-detail-reseñas-ctn">
+              <div class="anuncio-detail-reseñas-img">
+                <img class="img-reseña" src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-512.png" alt="">
+              </div>
+              <div class="anuncio-detail-reseñas-ctn-name">
+                <h2>Carla</h2>
+                <p class="anuncio-detail-reseña-p">La buardilla es super chula, muy limpia, Oliver nos ayudo a subir las maletas y nos transmitio muchisima seguridad</p>
+              </div>
+            </div>
+          <div class="anuncio-detail-spacer"></div>
+    </div>
+    <div class="anuncio-detail-normas">
+      <div class="normaTitle">
+      <h3>Normas de {{user.nombre}}</h3>
+    </div>
+      <div class="norma">
+        <h5>Como debe ser tu maleta</h5>
+        <div class="anuncio-detail-spacer-norma"></div>
+      </div>
+      <div class="norma">
+        <h5>Tipo de cancelacion de reserva</h5>
+        <div class="anuncio-detail-spacer-norma"></div>
+      </div>
+      <div class="norma">
+        <h5>Contactar con tu guardian</h5>
+        <div class="anuncio-detail-spacer-norma"></div>
+      </div>
+      <div class="norma">
+        <h5>Denunciar el anuncio</h5>
+        <div class="anuncio-detail-spacer-norma"></div>
+      </div>
+    </div>
+    
+    <div class="carrusel-anuncios">
+    <h5>Otros lockes cerca de ti</h5>
+    <!-- aqui va el carrusel de anuncios -->
+    </div>
+    <div class="anuncio-detail-precio-btn-reserva">
+      <div class="anuncio-total-price">
+        <h5 class="total">Total</h5>
+        <h5 class="precio">{{tipo.precio}} $</h5>
+      </div>
+    </div>
+    </div>
+    

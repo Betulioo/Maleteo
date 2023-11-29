@@ -1,1 +1,112 @@
-<p>anuncio-form works!</p>
+
+<div class="form-div-body">
+    <div class="form-div-header">
+        <div class="form-div-atras">
+            <button routerLink="/users" class="button">
+                <mat-icon>close</mat-icon >
+              </button>
+        </div>
+        <div class="form-div-text">
+            <p>Configura tu espacio en muy pocos pasos</p>
+            <div class="espacio-blanco"></div>
+        </div>
+    </div>
+
+    <div class="form-div-form">
+        <form id="anuncioForm" [formGroup]="anuncioForm" (ngSubmit)="save($event)">
+            <div class="form-first-input" *ngIf="!showInputs">
+                <h2>Describe tu espacio</h2>
+                <input *ngFor="let input of inputs" [value]="input">
+                <button class="first-input-button" (click)="showInputs = true">Continuar</button>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="form-first-input-2" *ngIf="showInputs">
+                <h1>Descríbenos tu espacio</h1>
+                <div class="div-form-first-input-2">
+                    <label class="label-first-input-2" for="propiedad">Especifica una propiedad</label>
+                    <select class="select-input-2" id="propiedad" formControlName="propiedad">
+                        <option value="">Selecciona una opción</option>
+                        <option value="casa">Casa</option>
+                        <option value="hotel">Hotel</option>
+                        <option value="establecimiento">Establecimiento</option>
+                    </select>
+                </div>
+                <div class="div-form-first-input-2">
+                    <label class="label-first-input-2" for="propiedad">¿Qué tipo de espacio?</label>
+                    <select class="select-input-2" id="propiedad" formControlName="tipo">
+                        <option value="">Selecciona una opción</option>
+                        <option value="habitacion">Habitacion</option>
+                        <option value="hall">Hall</option>
+                        <option value="trastero">Trastero</option>
+                        <option value="buhardilla">Buhardilla</option>
+                        <option value="garaje">Garaje</option>
+                    </select>
+                </div>
+                <div class="div-form-button">
+                    <button class="first-input-button" (click)="showInputs = false">Siguiente</button>
+                </div>
+            </div>
+            <div class="form-second-input">
+                <label class="label-inputs" for="ubicacion">Ubicación</label>
+                <input class="input-inputs" id="ubicacion" type="text" placeholder="Ciudad" formControlName="direccion"/>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="form-second-input">
+                <label class="label-inputs" for="titulo">Titulo</label>
+                <input class="input-inputs" id="titulo" type="text" placeholder="Titulo del anuncio" min="5" max="50" formControlName="titulo"/>
+                
+            </div>
+            <div>
+                <span *ngIf="anuncioForm.get('titulo')?.invalid && anuncioForm.get('titulo')?.touched">
+                    El titulo debe estar comprendido en un rango de 5 y 50 caracteres.
+                </span>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="form-second-input">
+                <label class="label-inputs" for="fotos">Fotos</label>
+                <input class="input-inputs" id="fotos" type="text" placeholder="url de la fotografía" formControlName="image"/>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="form-second-input-date">
+                <label class="label-inputs-date" for="horario">Disponibilidad y horarios</label>
+                    <mat-form-field>
+                        <mat-label>Elige fecha</mat-label>
+                        <input formControlName="horario" matInput [matDatepicker]="picker">
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="form-second-input">
+                <label class="label-inputs" for="servicio">Servicio</label>
+                <input class="input-inputs" id="servicio" type="text" placeholder="Servicio que ofrece" formControlName="servicio"/>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="form-second-input">
+                <label class="label-inputs" for="descripcion">Descripción</label>
+                <input class="input-inputs" id="descripcion" type="text" maxlength="700" placeholder="Servicio que ofrece" formControlName="descripcion"/>
+            </div>
+            <div>
+                <span *ngIf="anuncioForm.get('precio')?.invalid && anuncioForm.get('precio')?.touched">
+                    La descripción debe estar comprendida en un rango de como máximo 700 caracteres.
+                </span>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="form-second-input">
+                <label class="label-inputs" for="precio">Precio</label>
+                <input class="input-inputs" id="precio" type="number" placeholder="€" min="5" max="100" formControlName="precio"/>
+                
+            </div>
+            <div>
+                <span *ngIf="anuncioForm.get('precio')?.invalid && anuncioForm.get('precio')?.touched">
+                    El precio debe estar comprendido en un rango de 5 y 100 €.
+                </span>
+            </div>
+            <mat-divider></mat-divider>
+            <div class="div-button-submit">
+                <button  class="first-input-button" type="submit">Submit</button>
+            </div>
+        </form> 
+    </div>          
+</div>
+<!-- <app-footer></app-footer> -->
