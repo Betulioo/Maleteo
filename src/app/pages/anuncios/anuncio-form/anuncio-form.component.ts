@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, Validators, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AnunciosService } from '../../../services/anuncios/anuncios.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { IAnuncio } from '../../../models/anuncio.model';
 import { MatIconModule } from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
@@ -16,7 +16,7 @@ import {MatInputModule} from '@angular/material/input';
 @Component({
   selector: 'app-anuncio-form',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, MatIconModule, MatDividerModule, MatFormFieldModule, MatDatepickerModule, MatNativeDateModule, FormsModule,MatInputModule],
+  imports: [CommonModule, ReactiveFormsModule, MatIconModule, MatDividerModule, MatFormFieldModule, MatDatepickerModule, MatNativeDateModule, FormsModule,MatInputModule, RouterLink],
   templateUrl: './anuncio-form.component.html',
   styleUrl: './anuncio-form.component.scss'
 })

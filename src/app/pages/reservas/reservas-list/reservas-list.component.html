@@ -1,1 +1,18 @@
-<p>reservas-list works!</p>
+<div class="centered-div">
+    <mat-card class="example-card ">
+        <mat-card-header>
+          <mat-card-title>RESERVA REALIZADA CON EXITO</mat-card-title>
+          <mat-card-subtitle>¡Felicidades {{reserva.user.nombre}}  {{reserva.anuncio.direccion}} Te espera!</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <img src="https://cdn.zeplin.io/5d4d342a87666d9bb5130c1e/assets/A4FF5A89-E343-455B-B9B3-EAF8F41FA8FD.png">
+          <p>Podras dejar tu equipaje en  {{reserva.anuncio.propiedad}}</p>
+          <p>Numero de equipaje : {{reserva.equipaje}}</p>
+          <p>Valor total: 30€</p>
+          <!-- <p>{{longText}}</p> -->
+        </mat-card-content>
+        <mat-card-actions>
+          <button routerLink="/users" mat-button>Ir al Perfil</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>

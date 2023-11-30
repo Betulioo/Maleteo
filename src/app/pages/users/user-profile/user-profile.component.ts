@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IUser } from '../../../models/user.model';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UsersService } from '../../../services/users/users.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../../services/auth/auth.service';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -11,7 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [CommonModule, MatFormFieldModule, MatIconModule, ReactiveFormsModule],
+  imports: [CommonModule, MatFormFieldModule, MatIconModule, ReactiveFormsModule, RouterLink],
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.scss'
 })

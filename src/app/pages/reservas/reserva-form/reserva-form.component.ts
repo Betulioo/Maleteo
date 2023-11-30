@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormControl, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../../../services/auth/auth.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ReservasService } from '../../../services/reservas/reservas.service';
 import { AnunciosService } from '../../../services/anuncios/anuncios.service';
 import { IReserva } from '../../../models/reserva.model';
@@ -14,7 +14,7 @@ import { MatInputModule } from '@angular/material/input';
 @Component({
   selector: 'app-reserva-form',
   standalone: true,
-  imports: [CommonModule, FooterComponent, MatFormFieldModule, MatSelectModule,AnunciosListComponent, ReactiveFormsModule, MatInputModule,  ],
+  imports: [CommonModule, FooterComponent, MatFormFieldModule, MatSelectModule,AnunciosListComponent, ReactiveFormsModule, MatInputModule, RouterLink ],
   templateUrl: './reserva-form.component.html',
   styleUrl: './reserva-form.component.scss'
 })
